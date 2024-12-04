@@ -34,6 +34,7 @@ class Cuerpo extends StatelessWidget {
       drawer: MyDrawer(),
       body: Column(
         children: [
+          img(),
           Text(
             "Nombre:",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
@@ -74,4 +75,11 @@ void botonInservible(context) {
               "Se supone que este boton te lleve a la pagina siguiente,pero no hace nada xd"),
         );
       });
+}
+
+Widget img() {
+  return Image.network(
+    "https://warhammeruniverse.com/wp-content/uploads/2024/07/00077-2284780119.jpeg",
+    width: 300,
+  );
 }
