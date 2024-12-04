@@ -10,23 +10,33 @@ class ejericio1 extends StatelessWidget {
       appBar: AppBar(
         title: Text("Ejercicio 01"),
       ),
-      body: Column(
-        children: [
-          img(),
-          Text(
-            "Ejercicio de velocidad carros: ",
-            style: TextStyle(fontSize: 30),
+      body: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(32),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: NetworkImage(
+            "https://warhammeruniverse.com/wp-content/uploads/2024/07/00077-2284780119.jpeg",
           ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: velocidad0Input(),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: velocidadFInput(),
-          ),
-          calcularTButton(context),
-        ],
+          fit: BoxFit.cover,
+        )),
+        child: Column(
+          children: [
+            Text(
+              "Ejercicio de velocidad carros: ",
+              style: TextStyle(fontSize: 30),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: velocidad0Input(),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: velocidadFInput(),
+            ),
+            calcularTButton(context),
+          ],
+        ),
       ),
     );
   }

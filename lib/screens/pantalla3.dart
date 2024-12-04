@@ -12,19 +12,30 @@ class ejercicio2 extends StatelessWidget {
           style: TextStyle(fontSize: 30),
         ),
       ),
-      body: Column(
-        children: [
-          img(),
-          Text(
-            "Ingrese los datos: ",
-            style: TextStyle(fontSize: 30),
+      body: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(32),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/images/invoker.jpg',
+            ),
+            fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: alturaInput(),
-          ),
-          calcularPButton(context)
-        ],
+        ),
+        child: Column(
+          children: [
+            Text(
+              "Ingrese los datos: ",
+              style: TextStyle(fontSize: 30),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: alturaInput(),
+            ),
+            calcularPButton(context)
+          ],
+        ),
       ),
     );
   }

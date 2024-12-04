@@ -32,26 +32,36 @@ class Cuerpo extends StatelessWidget {
         backgroundColor: Color.fromRGBO(11, 21, 238, 1),
       ),
       drawer: MyDrawer(),
-      body: Column(
-        children: [
-          img(),
-          Text(
-            "Nombre:",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+      body: Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(32),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: NetworkImage(
+            "https://warhammeruniverse.com/wp-content/uploads/2024/07/00077-2284780119.jpeg",
           ),
-          Text(
-            "Hernan Calvopiña Duque",
-            style: TextStyle(fontSize: 35),
-          ),
-          Text(
-            "Usuario de Github:",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-          ),
-          Text(
-            "Alernanoh",
-            style: TextStyle(fontSize: 35),
-          ),
-        ],
+          fit: BoxFit.cover,
+        )),
+        child: Column(
+          children: [
+            Text(
+              "Nombre:",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            ),
+            Text(
+              "Hernan Calvopiña Duque",
+              style: TextStyle(fontSize: 35),
+            ),
+            Text(
+              "Usuario de Github:",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            ),
+            Text(
+              "Alernanoh",
+              style: TextStyle(fontSize: 35),
+            ),
+          ],
+        ),
       ),
     );
   }
